@@ -40,6 +40,10 @@
   },
   "description": "Combining Ember Data's store find() and all()",
   "keywords": [
+    "ember",
+    "ember.js",
+    "ember-cli",
+    "ember-data",
     "ember-addon"
   ],
   "ember-addon": {
