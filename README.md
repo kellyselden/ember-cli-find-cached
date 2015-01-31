@@ -1,25 +1,10 @@
-# Ember-cli-find-cached
+#ember-cli-find-cached
 
-This README outlines the details of collaborating on this Ember addon.
+Combining Ember Data's store find() and all(). Fresh calls use find(). Any subsequent calls use all(). It is useful if you are using other ways to refresh models.
 
-## Installation
+##Usage
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+`npm install --save-dev ember-cli-find-cached`
+```javascript
+this.store.findCached('product')
+```
