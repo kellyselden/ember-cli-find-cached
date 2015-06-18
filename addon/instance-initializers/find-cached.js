@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 // http://stackoverflow.com/a/19657808
-export function initialize(container) {
+export function initialize(instance) {
   var typesAlreadyCached = [];
-  var store = container.lookup('store:main');
+  var store = instance.container.lookup('store:main');
   store.findCached = function(type) {
     if (typesAlreadyCached.contains(type))
       return new Ember.RSVP.Promise(function(resolve) { return resolve(store.all(type)); });
@@ -14,6 +14,6 @@ export function initialize(container) {
 
 export default {
   name: 'find-cached',
-  after: 'store',
+  after: 'ember-data',
   initialize: initialize
 };
